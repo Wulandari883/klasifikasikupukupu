@@ -1,0 +1,116 @@
+<?xml version="1.0" ?>
+<mxfile host="Electron" modified="2026-06-20T00:36:35Z" agent="Mozilla/5.0" version="21.6.8">
+  <diagram id="activity-diagram" name="Activity Diagram Klasifikasi Kupu-Kupu">
+    <mxGraphModel dx="1000" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="lane_user" value="PENGGUNA" style="swimlane;html=1;startSize=30;fillColor=#E3F2FD;strokeColor=#1565C0;fontColor=#0D47A1;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="220" height="960" as="geometry"/>
+        </mxCell>
+        <mxCell id="lane_system" value="SISTEM" style="swimlane;html=1;startSize=30;fillColor=#E8F5E9;strokeColor=#2E7D32;fontColor=#1B5E20;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="260" y="40" width="260" height="960" as="geometry"/>
+        </mxCell>
+        <mxCell id="lane_db" value="DATABASE (SUPABASE)" style="swimlane;html=1;startSize=30;fillColor=#FFE0B2;strokeColor=#E65100;fontColor=#E65100;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="520" y="40" width="220" height="960" as="geometry"/>
+        </mxCell>
+        <mxCell id="init" value="" style="ellipse;html=1;fillColor=#000000;strokeColor=none;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="140" y="100" width="20" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="act_open" value="Membuka Halaman&lt;br/&gt;Klasifikasi" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1565C0;strokeWidth=1.5;fontColor=#0D47A1;" vertex="1" parent="1">
+          <mxGeometry x="90" y="150" width="120" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="act_upload" value="Mengunggah Citra&lt;br/&gt;Kupu-Kupu" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1565C0;strokeWidth=1.5;fontColor=#0D47A1;" vertex="1" parent="1">
+          <mxGeometry x="90" y="230" width="120" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="act_view_detail" value="Melihat Detail&lt;br/&gt;Spesies" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1565C0;strokeWidth=1.5;fontColor=#0D47A1;" vertex="1" parent="1">
+          <mxGeometry x="90" y="820" width="120" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="final" value="" style="ellipse;html=1;shape=mxgraph.sysml.finalState;fillColor=#000000;strokeColor=#1565C0;strokeWidth=2;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="140" y="910" width="20" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="act_validate" value="Validasi File Gambar" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2E7D32;strokeWidth=1.5;fontColor=#1B5E20;" vertex="1" parent="1">
+          <mxGeometry x="330" y="230" width="120" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="dec_valid" value="" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2E7D32;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="370" y="310" width="40" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="act_error" value="Menampilkan Pesan&lt;br/&gt;Error" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2E7D32;strokeWidth=1.5;fontColor=#1B5E20;" vertex="1" parent="1">
+          <mxGeometry x="330" y="380" width="120" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="act_send_api" value="Mengirim Citra ke&lt;br/&gt;FastAPI Backend" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2E7D32;strokeWidth=1.5;fontColor=#1B5E20;" vertex="1" parent="1">
+          <mxGeometry x="330" y="450" width="120" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="act_preprocess" value="Preprocessing Citra&lt;br/&gt;(Resize &amp;amp; Normalisasi)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2E7D32;strokeWidth=1.5;fontColor=#1B5E20;" vertex="1" parent="1">
+          <mxGeometry x="330" y="520" width="120" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="act_inference" value="Inferensi Model&lt;br/&gt;EfficientNet-B0" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2E7D32;strokeWidth=1.5;fontColor=#1B5E20;" vertex="1" parent="1">
+          <mxGeometry x="330" y="590" width="120" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="act_generate" value="Menghasilkan Prediksi&lt;br/&gt;(Spesies, Confidence,&lt;br/&gt;Kandidat)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2E7D32;strokeWidth=1.5;fontColor=#1B5E20;" vertex="1" parent="1">
+          <mxGeometry x="330" y="660" width="120" height="55" as="geometry"/>
+        </mxCell>
+        <mxCell id="act_display_result" value="Menampilkan Hasil&lt;br/&gt;Klasifikasi" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2E7D32;strokeWidth=1.5;fontColor=#1B5E20;" vertex="1" parent="1">
+          <mxGeometry x="330" y="820" width="120" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="act_get_details" value="Mengambil Detail&lt;br/&gt;Spesies dari DB" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E65100;strokeWidth=1.5;fontColor=#E65100;" vertex="1" parent="1">
+          <mxGeometry x="570" y="660" width="120" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="act_save_history" value="Menyimpan Riwayat&lt;br/&gt;Klasifikasi" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E65100;strokeWidth=1.5;fontColor=#E65100;" vertex="1" parent="1">
+          <mxGeometry x="570" y="730" width="120" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="act_save_candidates" value="Menyimpan Kandidat&lt;br/&gt;Prediksi" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E65100;strokeWidth=1.5;fontColor=#E65100;" vertex="1" parent="1">
+          <mxGeometry x="570" y="800" width="120" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="e1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;strokeWidth=1.2;" edge="1" parent="1" source="init" target="act_open">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;strokeWidth=1.2;" edge="1" parent="1" source="act_open" target="act_upload">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;strokeWidth=1.2;" edge="1" parent="1" source="act_upload" target="act_validate">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;strokeWidth=1.2;" edge="1" parent="1" source="act_validate" target="dec_valid">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e5_invalid" value="Tidak Valid" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;strokeWidth=1.2;entryX=1;entryY=0.5;" edge="1" parent="1" source="dec_valid" target="act_error">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e6_loop" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;strokeWidth=1.2;exitX=0;exitY=0.5;entryX=1;entryY=0.5;" edge="1" parent="1" source="act_error" target="act_upload">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e5_valid" value="Valid" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;strokeWidth=1.2;" edge="1" parent="1" source="dec_valid" target="act_send_api">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;strokeWidth=1.2;" edge="1" parent="1" source="act_send_api" target="act_preprocess">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;strokeWidth=1.2;" edge="1" parent="1" source="act_preprocess" target="act_inference">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;strokeWidth=1.2;" edge="1" parent="1" source="act_inference" target="act_generate">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;strokeWidth=1.2;" edge="1" parent="1" source="act_generate" target="act_get_details">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;strokeWidth=1.2;" edge="1" parent="1" source="act_get_details" target="act_save_history">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;strokeWidth=1.2;" edge="1" parent="1" source="act_save_history" target="act_save_candidates">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;strokeWidth=1.2;exitX=0;exitY=0.5;entryX=1;entryY=0.5;" edge="1" parent="1" source="act_save_candidates" target="act_display_result">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;strokeWidth=1.2;" edge="1" parent="1" source="act_display_result" target="act_view_detail">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;strokeWidth=1.2;" edge="1" parent="1" source="act_view_detail" target="final">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
